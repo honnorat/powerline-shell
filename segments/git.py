@@ -76,7 +76,7 @@ def add_git_segment(powerline):
     if branch_info:
         stats.ahead = branch_info["ahead"]
         stats.behind = branch_info["behind"]
-        branch = branch_info['local']
+        branch = " {}".format(branch_info['local'])
     else:
         branch = _get_git_detached_branch()
 
@@ -86,5 +86,5 @@ def add_git_segment(powerline):
         bg = Color.REPO_DIRTY_BG
         fg = Color.REPO_DIRTY_FG
 
-    powerline.append('  %s ' % branch, fg, bg)
+    powerline.append(' %s ' % branch, fg, bg)
     stats.add_to_powerline(powerline, Color)
