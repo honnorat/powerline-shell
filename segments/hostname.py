@@ -8,7 +8,7 @@ def add_hostname_segment(powerline):
         FG, BG = (rgb2short(*color) for color in [FG, BG])
         host_prompt = ' %s ' % hostname.split('.')[0]
 
-        powerline.append(host_prompt, FG, BG)
+        powerline.append(host_prompt, FG, BG, "")
     else:
         if powerline.args.shell == 'bash':
             host_prompt = ' \\h '
@@ -18,4 +18,4 @@ def add_hostname_segment(powerline):
             import socket
             host_prompt = ' %s ' % socket.gethostname().split('.')[0]
 
-        powerline.append(host_prompt, Color.HOSTNAME_FG, Color.HOSTNAME_BG)
+        powerline.append(host_prompt, Color.HOSTNAME_FG, Color.HOSTNAME_BG, "")

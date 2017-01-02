@@ -1,5 +1,8 @@
 class Color(DefaultColor):
 
+    HOSTNAME_FG = 221
+    HOSTNAME_BG = 235
+
     REPO_CLEAN_BG = 22    # dark green
     REPO_CLEAN_FG = 254   # very-light grey
     REPO_DIRTY_BG = 160   # red
